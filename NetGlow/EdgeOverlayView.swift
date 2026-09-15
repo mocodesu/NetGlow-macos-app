@@ -3,7 +3,7 @@ import SwiftUI
 struct EdgeOverlayView: View {
     var color: Color
     var opacity: Double
-    var lineWidth: CGFloat = 12
+    var lineWidth: CGFloat
 
     var body: some View {
         GeometryReader { geometry in
@@ -13,6 +13,6 @@ struct EdgeOverlayView: View {
                 .opacity(opacity)
         }
         .ignoresSafeArea()
-        .allowsHitTesting(false) // Crucial: lets clicks pass through
+        .allowsHitTesting(false)
     }
 }
